@@ -29,14 +29,14 @@ export default function Chat({ socket, username, room}) {
   return (
     <div className='chat-window'>
         <div className='chat-header'>
-            <p>Live Chat</p>
+            <p>Vungel Chat</p>
         </div>
         <div className='chat-body'>
             <ScrollToBottom className='message-container'>
             {messageList.map((messageContent)=>{
                 return (
                     <div className='message'
-                    id={username === messageContent.author ? "you" : "other"}
+                    id={username === messageContent.author ? "other" :  "you"}
                     >
                         <div>
                             <div className='message-content'>
@@ -56,7 +56,7 @@ export default function Chat({ socket, username, room}) {
             <input 
             type='text'
             value={currentMessage}
-            placeholder='hey...' 
+            placeholder='Digite sua mensagem: ' 
             onKeyPress={(e)=>{
                 e.key === "Enter" && sendMessage()
             }} 

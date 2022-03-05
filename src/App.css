@@ -60,8 +60,8 @@
   }
   .chat-window .chat-header {
     height: 45px;
-    border-radius: 6px;
-    background: #263238;
+    border-radius: 10px 10px 0 0;
+    background: #2da0da;
     position: relative;
     cursor: pointer;
   }
@@ -74,10 +74,10 @@
   }
   
   .chat-window .chat-body {
-    height: calc(450px - (45px + 70px));
-    border: 1px solid #263238;
-    background: #fff;
-  
+    height: calc(480px - (10px + 70px));
+    border: 1px solid #1c967b;
+    background: rgb(224, 243, 53);
+    box-shadow:blue;
     position: relative;
   }
   .chat-window .chat-body .message-container {

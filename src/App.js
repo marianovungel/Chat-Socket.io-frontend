@@ -3,7 +3,7 @@ import io from 'socket.io-client';
 import { useState } from 'react';
 import Chat from './Chat'
 
-const socket = io.connect("http://localhost:3001")
+const socket = io.connect("https://vungel-chat-backend-socket-io.herokuapp.com")
 
 function App() {
 
@@ -22,10 +22,10 @@ function App() {
     <div className="App">
       {!showChat ? (
       <div className='joinChatContainer'>
-        <h3>Join A Chat</h3>
+        <h3>Vungel Chat</h3>
         <input type='text' placeholder=' your username:' onChange={(e)=>{setUsername(e.target.value)}} />
         <input type='text' placeholder=' Room ID:' onChange={(e)=>{setRoom(e.target.value)}} />
-        <button onClick={joinRoom}>Join A Room</button>
+        <button onClick={joinRoom}>Conectar</button>
       </div>
       ) :
 
